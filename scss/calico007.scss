@@ -1,0 +1,62 @@
+// ~~~~~ CALICO VERSION 006 ~~~~~
+
+// Hit *control* then *~* to open command prompt
+// Then run code "sass --watch scss:css" to compile
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+$main-background: #222;
+$primary: #5d4892;
+$secondary: #ea44f5;
+
+*{
+  margin: 0;
+}
+body{
+  color: var(--main-text);
+  min-height: 100vh;
+  background-color: var(--main-background);
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-color: var(--header-background);
+  border-bottom: 1px solid var(--light-text);
+  h1{
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  nav{
+    a{
+      padding: 0 4px;
+    }
+  }
+}
+main{
+  background-color: var(--main-background);
+  padding-top: 120px;
+  flex: auto;
+}
+footer{
+  padding: 20px;
+
+  //Temporary
+  min-height: 100px;
+  min-width: 100px;
+}
+
+img{
+  //Temporary
+  max-width: 100vw;
+  max-height: 100vh;
+}

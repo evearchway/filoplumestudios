@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FiloLang</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Links -->
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../css/calico007.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- scripts -->
+    <script src="js/calico007.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>
+          <a href="../index.html" aria-label="Filoplume Studios home">
+            <img src="../images/filoplume-studios-title.png" alt="Filoplume Studios" class="header-title-image">
+          </a>
+        </h1>
+      </div>
+      <nav>
+        <a href="../index.html">FiloLang</a>
+      </nav>
+    </header>
+    <main>
+      <div id="mainMenu" class="menu">
+        <h2>Select Level</h2>
+        
+        <div class="level-selector">
+          <button class="level-card active" onclick="selectLevel(1)">
+            <div class="level-number">1</div>
+            <div class="level-title">Level 1</div>
+          </button>
+          <button class="level-card" onclick="selectLevel(2)">
+            <div class="level-number">2</div>
+            <div class="level-title">Level 2</div>
+          </button>
+        </div>
+      </div>
+
+      <div id="container" style="display: none;" class="study-container">
+        <div class="study-area">
+          <div id="progressBar">
+            <div id="progressFill"></div>
+          </div>
+          <div class="study-header">
+            <button id="backBtn" style="display: none;">← Back</button>
+            <div id="difficultyControls" class="difficulty-controls">
+              <button id="decreaseDifficultyBtn" class="difficulty-btn" onclick="decreaseDifficulty()">−</button>
+              <span id="difficultyLevel" class="difficulty-label">5</span>
+              <button id="increaseDifficultyBtn" class="difficulty-btn" onclick="increaseDifficulty()">+</button>
+            </div>
+            <span id="masteryDisplay" class="mastery-badge">0</span>
+          </div>
+          <div class="study-tabs" role="tablist" aria-label="Study view tabs">
+            <button id="questionTabBtn" class="study-tab active" type="button" onclick="setStudyView('question')">Question</button>
+            <button id="sentenceTabBtn" class="study-tab" type="button" onclick="setStudyView('sentence')">Sentence</button>
+          </div>
+          <div id="questionPanel" class="study-panel active">
+            <div id="question" class="spanish-word"></div>
+            <div id="choices" class="choices"></div>
+          </div>
+          <div id="sentencePanel" class="study-panel">
+            <div id="sentenceView" class="sentence-view"></div>
+          </div>
+          <div class="button-group">
+            <button id="speedModeBtn" class="speed-toggle-btn" onclick="toggleSpeedMode()">Speed Mode: Off</button>
+            <button id="skipBtn" class="skip-btn">Skip</button>
+          </div>
+        </div>
+        <aside class="study-sidebar">
+          <h3>Mastery Circle</h3>
+          <div id="masteryChart" class="mastery-chart"></div>
+          <div id="masteryLegend" class="mastery-legend"></div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Filoplume Studios. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
