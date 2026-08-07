@@ -342,9 +342,26 @@ main {
 }
 
 .project-content {
+  width: 90%;
   flex: 1;
   position: relative;
   z-index: 1;
+  text-align: center;
+  .project-card-title{
+    display: flex;
+    justify-content: center;
+  }
+  .project-card-image{
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card.featured {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
 }
 
 .project-content h3 {
