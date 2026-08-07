@@ -100,7 +100,6 @@ header nav {
     font-size: 0.84rem;
   }
 }
-
 header nav a {
   color: white;
   text-decoration: none;
@@ -117,7 +116,7 @@ header nav a {
 }
 
 header nav a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -151,10 +150,8 @@ header nav a:hover {
    HERO SECTION - MODERN GRADIENT BACKGROUND
    ============================================ */
 .hero {
-  background: linear-gradient(135deg, #6B2FA0 0%, #5A1F7D 25%, #FF8C42 50%, #FFD700 75%, #FF6B35 100%);
-  background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
-  color: white;
+  background-image: linear-gradient(rgba(240, 205, 242, 0.5), rgba(240, 205, 242, 0.5)), url(../images/paper-texture-horizontal.jpg);
+  color: var(--deep-purple);
   padding: 28px 20px;
   text-align: center;
   height: calc(100dvh - var(--header-height));
@@ -172,7 +169,7 @@ main {
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   right: -10%;
@@ -184,7 +181,7 @@ main {
 }
 
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20%;
   left: -10%;
@@ -196,11 +193,16 @@ main {
 }
 
 @keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
 .hero-content {
   max-width: 700px;
   position: relative;
@@ -218,7 +220,6 @@ main {
     transform: translateY(0);
   }
 }
-
 .hero h2 {
   font-size: 4rem;
   margin-bottom: 20px;
@@ -245,7 +246,7 @@ main {
 }
 
 .about::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -278,16 +279,16 @@ main {
 }
 
 /* ============================================
-   FEATURED PROJECT SECTION
+   FEATURED ARTIST SECTION
    ============================================ */
-.featured-project {
+.featured-artist {
   padding: 80px 20px;
   background: linear-gradient(180deg, #ffffff 0%, #f5f3ff 50%, #ffe6f0 100%);
   position: relative;
 }
 
-.featured-project::before {
-  content: '';
+.featured-artist::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: -100px;
@@ -298,7 +299,7 @@ main {
   pointer-events: none;
 }
 
-.featured-project h2 {
+.featured-artist h2 {
   font-size: 2.8rem;
   margin-bottom: 50px;
   text-align: center;
@@ -313,8 +314,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #6B2FA0 0%, #5A1F7D 50%, #FF8C42 100%);
-  border: none;
+  background: #f1e2ed;
+  border: 3px solid var(--royal-purple);
   border-radius: 20px;
   padding: 50px;
   gap: 50px;
@@ -325,7 +326,7 @@ main {
 }
 
 .project-card.featured::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   right: -50%;
@@ -350,7 +351,7 @@ main {
 .project-content h3 {
   font-size: 2.3rem;
   margin-bottom: 20px;
-  color: white;
+  color: var(--royal-purple);
   font-weight: 700;
 }
 
@@ -370,10 +371,13 @@ main {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
-
 /* ============================================
    PROJECTS GRID SECTION
    ============================================ */
@@ -384,7 +388,7 @@ main {
 }
 
 .projects-grid::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
@@ -427,15 +431,13 @@ main {
 }
 
 .grid .project-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, 
-    rgba(102, 126, 234, 0.05) 0%, 
-    rgba(240, 147, 251, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(240, 147, 251, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.4s ease;
   border-radius: 16px;
@@ -536,7 +538,7 @@ main {
 }
 
 .cta-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -589,7 +591,7 @@ main {
 }
 
 .cta-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -10%;
@@ -601,7 +603,7 @@ main {
 }
 
 .cta-section::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20%;
   right: -10%;
@@ -689,9 +691,9 @@ footer p {
   }
 
   .about h2,
-  .featured-project h2,
-  .projects-grid h2,
-  .cta-section h2 {
+.featured-project h2,
+.projects-grid h2,
+.cta-section h2 {
     font-size: 1.8rem;
   }
 
@@ -703,5 +705,6 @@ footer p {
     font-size: 1.2rem;
   }
 }
+/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */

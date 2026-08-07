@@ -1,5 +1,14 @@
 window.onload = function(){
     keyPressSetup();
+    $("#contact-button").on("click", function () {
+        navigator.clipboard.writeText("EveArchway@gmail.com")
+        .then(function () {
+            alert("Copied email to clipboard");
+        })
+        .catch(function (err) {
+            console.error("Failed to copy Email to clipboard")
+        })
+    });
 }
 
 
